@@ -1,0 +1,113 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 80%;
+    margin: 30px auto;
+    gap: 30px;
+}
+.grid button {
+    background-color: red;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+.grid > div {
+    line-height: 5px;
+}
+
+.grid .btn{
+    background-color: orange;
+}
+.grid img {
+    border-radius: 20px;
+    height: 350px;
+    width: 90%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+.grid>div>div{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+.grid h5{
+    font-size: 18px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin:25px auto;
+}
+.grid span {
+    font-size: 14px;
+    color: gray;
+    margin-left: 10px;
+}
+@keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .spinner{
+    margin:50px auto;
+    width: 100px;
+  }
+  .loading {
+    width: 50px;
+    height: 50px;
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid #383636; /* Black */
+    border-radius: 50%;
+    animation: spinner 1.5s linear infinite;
+  }
+@media all and (min-width:50px) and (max-width:391px){
+    .grid {
+        width: 90%;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media all and (min-width:391px) and (max-width:821px){
+    .grid {
+        width: 90%;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+.box,.page{
+    width: 75%;
+    margin-right: 0;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: flex-end;
+}
+.page {
+    justify-content: flex-start;
+}
+.box button {
+    background-color:orangered;
+    padding: 7px 15px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.page button{
+    padding: 7px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.box input {
+    padding: 7px;
+    color: black;
+}
