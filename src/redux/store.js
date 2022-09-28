@@ -1,9 +1,14 @@
-import {legacy_createStore,combineReducers,compose,applyMiddleware} from 'redux';
-import thunk from 'redux-thunk';
-import { reducer } from './reducer';
+import {
+  legacy_createStore,
+  combineReducers,
+  compose,
+  applyMiddleware,
+} from "redux";
+import thunk from "redux-thunk";
+import { reducer } from "./reducer";
 
 const rootReducer = combineReducers({
-    anime:reducer
+  anime: reducer,
 });
 
 const composeEnhancers =
@@ -13,8 +18,6 @@ const composeEnhancers =
       })
     : compose;
 
-const enhancer = composeEnhancers(
-  applyMiddleware(thunk)
-);
+const enhancer = composeEnhancers(applyMiddleware(thunk));
 
 export const store = legacy_createStore(rootReducer, enhancer);

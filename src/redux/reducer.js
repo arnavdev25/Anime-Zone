@@ -34,7 +34,7 @@ export const reducer = (state = iniState, { type, payload }) => {
         ...state,
         loading: false,
         error: false,
-        singleAnime: payload, 
+        singleAnime: payload,
       };
     default:
       return state;

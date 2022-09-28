@@ -64,7 +64,7 @@ const Anime = () => {
                 Popularity : <span>{singleAnime.popularity}</span>
               </h5>
               <div>
-                <a  href={singleAnime.url}>Visit Here</a>
+                <a href={singleAnime.url}>Visit Here</a>
               </div>
             </div>
           </div>

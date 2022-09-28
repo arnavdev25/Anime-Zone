@@ -28,15 +28,29 @@ const Home = () => {
           <>Something Went Wrong...</>
         ) : (
           <>
-            <div className={style.box} >
+            <div className={style.box}>
               <div>
-                <input placeholder="Search by Title" onChange={(e) => setTitle(e.target.value)} type="text" />
+                <input
+                  placeholder="Search by Title"
+                  onChange={(e) => setTitle(e.target.value)}
+                  type="text"
+                />
               </div>
               <button onClick={() => navigate(`/watchlist`)}>Watch List</button>
             </div>
             <div className={style.page}>
-            <button disabled={page<2?true:false} onClick={() => setPage(page - 1)}>Prev</button>
-            <button disabled={page>=1025?true:false} onClick={() => setPage(page + 1)}>Next</button>
+              <button
+                disabled={page < 2 ? true : false}
+                onClick={() => setPage(page - 1)}
+              >
+                Prev
+              </button>
+              <button
+                disabled={page >= 1025 ? true : false}
+                onClick={() => setPage(page + 1)}
+              >
+                Next
+              </button>
             </div>
             <div className={style.grid}>
               {allAnimes &&
